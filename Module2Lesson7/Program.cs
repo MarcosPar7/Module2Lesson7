@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.ComponentModel.Design;
+using System.Drawing;
 
 //1.Napisz program w C#, który stworzy dwie zmienne int i sprawdzi czy są one równe czy nie. Dane testowe: a : 5 b : 5 Rezultat w terminalu : 5 i 5 są równe
 
@@ -97,20 +98,20 @@ else
 
     //6.Napisz program w C#, który pobierze wzrost użytkownika i przypisze mu wymyśloną kategorię wzrostu. Dane testowe : 140 Rezultat w terminalu : Jesteś krasnoludem
 
-    int hight = 140;
+    int height = 140;
 
-    if (hight >= 200)
+    if (height >= 200)
     {
         Console.WriteLine("You are giant");
     }
 
-    else if (hight >= 180)
+    else if (height >= 180)
     { Console.WriteLine("You are high"); }
 
-    else if (hight >= 160)
+    else if (height >= 160)
     { Console.WriteLine("You are ok"); }
 
-    else if (hight >= 140)
+    else if (height >= 140)
     { Console.WriteLine("You are dwarf"); }
 
     else { Console.WriteLine("Probably You are not a human"); }
@@ -162,32 +163,44 @@ Console.WriteLine("Write a temperature");
 int temperature = Convert.ToInt32(Console.ReadLine());
 
 if (temperature < 0)
-{ Console.WriteLine("cholernie piździ"); }
+{ 
+    Console.WriteLine("cholernie piździ");
+}
 
 else if (temperature >= 0 && temperature < 10)
-{ Console.WriteLine("zimno"); }
+{
+    Console.WriteLine("zimno"); 
+}
 
 else if (temperature >= 10 && temperature < 20)
-{ Console.WriteLine("chłodno"); }
+{ 
+    Console.WriteLine("chłodno"); 
+}
 
 else if (temperature >= 20 && temperature < 30)
-{ Console.WriteLine("w sam raz"); }
+{ 
+    Console.WriteLine("w sam raz"); 
+}
 
 else if (temperature >= 30 && temperature < 40)
-{ Console.WriteLine("zaczyna być słabo, bo gorąco"); }
+{ 
+    Console.WriteLine("zaczyna być słabo, bo gorąco"); 
+}
 
 else if (temperature >= 40)
-{ Console.WriteLine("a weź wyprowadzam się na Alaskę."); }
+{ 
+    Console.WriteLine("a weź wyprowadzam się na Alaskę."); 
+}
 
 // 10.Napisz program, który sprawdzi, czy z 3 podanych długości można stworzyć trójkąt Dane testowe: 40 55 65 Rezultat w terminalu: Można zbudować trójkąt
 
 Console.WriteLine("Write lenghts sides of triangle, separated by commas");
 string[] sides = Console.ReadLine().Split(",");
-int d = Convert.ToInt32(sides[0]);
-int e = Convert.ToInt32(sides[1]);
-int f = Convert.ToInt32(sides[2]);
+int side1 = Convert.ToInt32(sides[0]);
+int side2 = Convert.ToInt32(sides[1]);
+int side3 = Convert.ToInt32(sides[2]);
 
-if (d + e > f && d + f > e && e + f > d)
+if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1)
 {
     Console.WriteLine("You can create a triangle");
 }
